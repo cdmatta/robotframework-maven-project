@@ -5,5 +5,4 @@ Suite Teardown  Stop Selenium Server
 
 *** Test Cases ***
 My Test
-   Log  Hello world
    Open Browser  http://robotframework.googlecode.com
