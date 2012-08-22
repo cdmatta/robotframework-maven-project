@@ -17,6 +17,7 @@
     <junit.version>4.10</junit.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <robotframework.version>2.7.3</robotframework.version>
+    <robotframework.javalib.version>0.9.1</robotframework.javalib.version>
     <system-under-test>localhost</system-under-test>
   </properties>
 
@@ -32,6 +33,11 @@
       <artifactId>robotframework</artifactId>
       <version>${robotframework.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.robotframework</groupId>
+      <artifactId>javalib-core</artifactId>
+      <version>${robotframework.javalib.version}</version>
     </dependency>
   </dependencies>
 
