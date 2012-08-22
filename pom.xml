@@ -127,11 +127,11 @@
             <argument>--outputdir</argument>
             <argument>${project.build.directory}/robot</argument>
             <argument>--output</argument>
-            <argument>${project.groupId}-${project.artifactId}-${project.version}-output.xml</argument>
+            <argument>${project.groupId}-${project.artifactId}-${project.version}-${maven.build.timestamp}-output.xml</argument>
             <argument>--log</argument>
-            <argument>${project.groupId}-${project.artifactId}-${project.version}-log.html</argument>
+            <argument>${project.groupId}-${project.artifactId}-${project.version}-${maven.build.timestamp}-log.html</argument>
             <argument>--report</argument>
-            <argument>${project.groupId}-${project.artifactId}-${project.version}-report.html</argument>
+            <argument>${project.groupId}-${project.artifactId}-${project.version}-${maven.build.timestamp}-report.html</argument>
             <!-- argument> - -exclude</argument>
             <argument>inprogress</argument>
             <argument>- -include</argument>
