@@ -42,9 +42,10 @@ from xpath import LocatorParser
 from version import VERSION
 
 __version__ = VERSION
+SELENIUM_LIBRARY_INSTALL =os.path.join(os.path.abspath("."), "src/test/resources/robotframework/libraries/SeleniumLibrary")
 _SELLIB_DIR = os.path.dirname(os.path.abspath(__file__))
-SELENIUM_SERVER_PATH = os.path.join(_SELLIB_DIR, 'lib', 'selenium-server.jar')
-FIREFOX_PROFILE_DIR = os.path.join(_SELLIB_DIR, 'firefoxprofile')
+SELENIUM_SERVER_PATH = os.path.join(SELENIUM_LIBRARY_INSTALL, 'lib', 'selenium-server.jar')
+FIREFOX_PROFILE_DIR = os.path.join(SELENIUM_LIBRARY_INSTALL, 'firefoxprofile')
 FIREFOX_DEFAULT_PROFILE = 'DEFAULT'
 FIREFOX_TEMPLATE_ARG = '-firefoxProfileTemplate'
 
