@@ -108,7 +108,7 @@
         <configuration>
           <executable>jybot</executable>
           <environmentVariables>
-            <CLASSPATH>${project.build.directory}${file.separator}classes${path.separator}${project.build.directory}${file.separator}dependency${file.separator}*</CLASSPATH>
+            <CLASSPATH>${project.build.directory}${file.separator}classes${path.separator}${project.build.directory}${file.separator}dependency${file.separator}*${path.separator}${project.basedir}/src/test/resources/robotframework/libraries</CLASSPATH>
           </environmentVariables>
           <arguments>
             <argument>-C</argument>
