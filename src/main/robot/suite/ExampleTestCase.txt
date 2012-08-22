@@ -1,8 +1,9 @@
 *** Settings ***
+Library  SeleniumLibrary
+Suite Setup  Start Selenium Server
+Suite Teardown  Stop Selenium Server
 
 *** Test Cases ***
-Check number equality
-    [Documentation]  A testcase worth hello world.
-    [Tags]  hello
-    Should Be Equal As Numbers  1.1  1.1  precision=1
-
+My Test
+   Log  Hello world
+   Open Browser  http://robotframework.googlecode.com
