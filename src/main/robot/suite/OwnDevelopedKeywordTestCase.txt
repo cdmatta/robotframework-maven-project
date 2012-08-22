@@ -1,0 +1,6 @@
+*** Settings ***
+Library  org.robotframework.javalib.library.AnnotationLibrary  com/charandeepmatta/keywords/**.class
+
+*** Test Cases ***
+Keyword defined in java class can print to error stream
+   Print To Error Stream
