@@ -81,7 +81,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.1</version>
+        <version>2.5</version>
         <executions>
           <execution>
             <id>get dependencies</id>
@@ -95,7 +95,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>1.1.1</version>
+        <version>1.2.1</version>
         <executions>
           <execution>
             <id>robot</id>
