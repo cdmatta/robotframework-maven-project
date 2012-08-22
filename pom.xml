@@ -14,11 +14,9 @@
   </prerequisites>
 
   <properties>
-    <db.port>4711</db.port>
     <junit.version>4.10</junit.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <robotframework.version>2.7.3</robotframework.version>
-    <ROBOT_TESTS>${project.basedir}/src/main/robot/suite</ROBOT_TESTS>
     <system-under-test>localhost</system-under-test>
   </properties>
 
@@ -115,15 +113,15 @@
         <configuration>
           <executable>jybot</executable>
           <environmentVariables>
+            <!-- Classpath contains:
+                 target/classes
+                 target/dependency/* (for java libraries)
+                 src/test/resources/robotframework/libraries (for additional robotframework libraries ex. SeleniumLibrary) -->
             <CLASSPATH>${project.build.directory}${file.separator}classes${path.separator}${project.build.directory}${file.separator}dependency${file.separator}*${path.separator}${project.basedir}/src/test/resources/robotframework/libraries</CLASSPATH>
           </environmentVariables>
           <arguments>
             <argument>-C</argument>
             <argument>off</argument>
-            <argument>--variable</argument>
-            <argument>SYSTEM_UNDER_TEST:${system-under-test}</argument>
-            <argument>--variable</argument>
-            <argument>DB_PORT:${db.port}</argument>
             <argument>--variable</argument>
             <argument>RESOURCES:${project.basedir}/src/main/robot/resource</argument>
             <argument>--outputdir</argument>
@@ -134,11 +132,12 @@
             <argument>${project.groupId}-${project.artifactId}-${project.version}-log.html</argument>
             <argument>--report</argument>
             <argument>${project.groupId}-${project.artifactId}-${project.version}-report.html</argument>
-            <!-- argument> -exclude</argument>
+            <!-- argument> - -exclude</argument>
             <argument>inprogress</argument>
-            <argument>-include</argument>
+            <argument>- -include</argument>
             <argument>author-*</argument-->
-            <argument>${ROBOT_TESTS}</argument>
+            <!-- Test case location -->
+            <argument>${project.basedir}/src/main/robot/suite</argument>
           </arguments>
         </configuration>
       </plugin>
